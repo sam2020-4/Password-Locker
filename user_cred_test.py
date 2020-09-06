@@ -72,8 +72,18 @@ class TestCredential(unittest.TestCase):
 
     def test_save_credentials(self):
         self.new_credential.save_credentials()
-        
+        twitter = Credential("sam", "twitter", "12345")
+        twitter.save_credentials()
+        self.assertEqual(len(Credential.credential_list), 2)
 
+    def test_delete_credentials(self):
+        self.new_credential.save_credentials()
+        twitter = Credential("sam", "twitter", "12345")
+        twitter.save_credentials()
+        twitter.delete_credentials()
+        self.assertEqual(len(Credential.credential_list), 1)
+
+    
 
 
 
