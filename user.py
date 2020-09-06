@@ -88,11 +88,10 @@ class Credential:
                 
                 return credential
 
-
     # @classmethod
-    # def copy_user_name(cls, socialmedia):
+    # def copy_socialmedia(cls, socialmedia):
     #     '''
     #     method to copy user credentials to the clipboard once user account is entered.
     #     '''
-    #     credentials_found = Credential.find_by_socialmedia(socialmedia)
-    #     pyperclip.copy(credentials_found.user_name)
+    #     credentials_found =Credential.find_by_socialmedia(socialmedia)
+    #     pyperclip.copy(credentials_found.socialmedia)

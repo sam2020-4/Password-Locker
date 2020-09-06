@@ -94,5 +94,14 @@ class TestCredential(unittest.TestCase):
         credential_found = Credential.find_by_socialmedia('twitter')
         self.assertEqual(credential_found.socialmedia,test_credential.socialmedia)
 
+    # def test_copy_socialmedia(self):
+    #     '''
+    #     Test to confirm that we are copying the user_name from a found credentials.
+    #     '''
+    #     self.new_credential.save_credentials()
+    #     Credential.copy_socialmedia("xxxxxx")
+
+    #     self.assertEqual(self.new_credential.socialmedia, pyperclip.paste())
+     
 if __name__ == '__main__':
     unittest.main()
