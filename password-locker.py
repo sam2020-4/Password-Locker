@@ -68,3 +68,8 @@ def copy_credentials(cls, socialmedia):
     a class method to enable use to copy credentials to the clipboard
     '''
     return cls.copy_credentials(cls, socialmedia)
+
+def main():
+
+if __name__ == '__main__':
+    unittest.main()
