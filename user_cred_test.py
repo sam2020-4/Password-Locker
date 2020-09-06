@@ -82,10 +82,17 @@ class TestCredential(unittest.TestCase):
         twitter.save_credentials()
         twitter.delete_credentials()
         self.assertEqual(len(Credential.credential_list), 1)
-
     
 
-
+    def test_find_credential_by_socialmedia(self):
+        '''
+        test to check if the find by aacount type returns the correct credentials.
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credential('sam', 'twitter', '12345')
+        test_credential.save_credentials()
+        credential_found = Credential.find_by_socialmedia('twitter')
+        self.assertEqual(credential_found.socialmedia,test_credential.socialmedia)
 
 if __name__ == '__main__':
     unittest.main()

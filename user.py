@@ -74,3 +74,25 @@ class Credential:
     def delete_credentials(self):
         Credential.credential_list.remove(self) 
 
+    def generate_password(self, pass_len=5):
+        password_chars = string.ascii_letters + string.digits + string.punctuation
+        return ''.join(secrets.choice(password_chars) for i in range(int(pass_len)))
+      
+    @classmethod
+    def find_by_socialmedia(cls, socialmedia):
+        '''
+        function to find whether the user credentials exist
+        '''
+        for credential in cls.credential_list:
+            if credential.socialmedia == socialmedia:
+                
+                return credential
+
+
+    # @classmethod
+    # def copy_user_name(cls, socialmedia):
+    #     '''
+    #     method to copy user credentials to the clipboard once user account is entered.
+    #     '''
+    #     credentials_found = Credential.find_by_socialmedia(socialmedia)
+    #     pyperclip.copy(credentials_found.user_name)
