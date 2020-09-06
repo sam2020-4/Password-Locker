@@ -76,7 +76,13 @@ def main():
     print(f"woow!!! welcome back {user_name}.\n; Enter other Name")
     
     user_name = input()
-    print('\n')   
+    print('\n')  
+
+    while True:
+        print('\n')
+        print("use these short codes: cc - creates a new user, dc - display users, fc -find a user, ex -exit the user list ")
+         
+
 
 
 if __name__ == '__main__':
