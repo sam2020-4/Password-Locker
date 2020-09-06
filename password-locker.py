@@ -70,6 +70,14 @@ def copy_credentials(cls, socialmedia):
     return cls.copy_credentials(cls, socialmedia)
 
 def main():
+    print("Hello, Welcome to the Password Locker App!!, please Enter your name?")
+    
+    user_name = input()
+    print(f"woow!!! welcome back {user_name}.\n; Enter other Name")
+    
+    user_name = input()
+    print('\n')   
+
 
 if __name__ == '__main__':
-    unittest.main()
+    main()
