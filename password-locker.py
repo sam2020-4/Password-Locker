@@ -107,15 +107,31 @@ def main():
                 # break
 
             elif password_choice == 'ex':
-                 break
-                    
+                 print('bye no password found!!!.......')
+                 break                
+            
+
+            elif short_code == 'ex':
+                print('bye!!!.......')
+                break
+            
             else:
                 print('sorry, i did not get that......please try again!!')
 
-            # save new user
+            if short_code == 'cc':
+                print('\n')
+                print("Enter your credential details")
+               
+                print(f"Enter username ")
+                user_name = input()
+                print(f"Enter socialmedia")
+                socialmedia = input()
 
-
-
+                print(f"Enter the username you used or would love to use on {socialmedia}")
+                user_name = input()
+            
+            else:
+                print("wrong credentials entered")
 
 if __name__ == '__main__':
     main()
