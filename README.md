@@ -16,7 +16,7 @@ Functions of the Web application
 
 3.The application allows users to input there passwords and usernames on login in.
 
-Setup/Installation requirements
+## Setup/Installation requirements
 1.Clone or download and unzip the repository from github https://github.com/sam2020-4/Password-Locker
 
 2.You can use this command (git clone my link) to clone the project to your machine.
@@ -25,10 +25,10 @@ Setup/Installation requirements
 
 4.Run python3.8 password-locker.py to launch the program.
 
-Technologies used
+## Technologies used
 Python
 
 Pyperclip
 
-Support
+## Support
 Find me at my email address for any kind of help mattasamuel3@gmail.com
