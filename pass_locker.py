@@ -132,6 +132,12 @@ def main():
                 print(f"Welcome to your Password locker account {first_name}: \n Please choose an option to continue...")
                 print('\n')
 
+                while True:
+                    print('\n')
+                    print("Navigation short codes: \n cc to create new credentials: \n dc to display credentials: \n sc to search credentials: \n rm to remove or delete credentials: \n copy to copy credentials: \n ex to exit")
+                    print('\n')
+                    short_code = input().lower()
+
 
 
 
