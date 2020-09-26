@@ -119,6 +119,13 @@ def main():
                 f"Your password is {password} :-Use it to log in using short code ln")
 
             print('\n')
+        elif short_code == 'ln':
+            print('\n')
+            print("Enter your account details to log in: \n Enter your first name...")
+            first_name = input()
+            print("Enter your password...")
+            password = input()
+            account_exist = verify_user(first_name, password)
 
 
 
