@@ -93,6 +93,22 @@ def main():
             password_choice = input()
             password = ''
 
+            if password_choice == 'cyo':
+                password = password.join(
+                    input("Enter a password of your choice..."))
+                # break
+
+            elif password_choice == 'gp':
+                print("Enter the length of the password you wish to generate eg 9 ")
+                pass_len = input()
+                password = password.join(
+                    Credential.generate_password(pass_len))
+                # break
+
+            elif password_choice == 'ex':
+                break
+
+
 
 
 if __name__ == "__main__":
