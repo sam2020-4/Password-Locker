@@ -10,10 +10,13 @@ class User:
 
     user_list = [] #empty user list
 
-    def __init__(self, u_name,l_name, password):
+    def __init__(self, first_name,last_name,email,phone_number, password):
         
-        self.u_name = u_name
-        self.l_name = l_name
+        # instance variables
+        self.first_name = first_name
+        self.last_name = last_name
+        self.email = email
+        self.phone_number = phone_number
         self.password = password
     
     #save user
