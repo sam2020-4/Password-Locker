@@ -56,6 +56,13 @@ def copy_credentials(cls, site_name):
     '''
     return cls.copy_credentials(cls, site_name)
 
+def main():
 
-if __name__ == '__main__':
+    guest_name = input("What is your name?")
+    print(f"Hello {guest_name}, welcome to Password Locker:")
+    print('\n')
+
+
+if __name__ == "__main__":
     main()
+    
