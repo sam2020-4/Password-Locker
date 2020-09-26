@@ -151,6 +151,30 @@ def main():
                         print(f"Enter the username you used or would love to use on {site_name}")
                         user_name = input()
 
+                        while True:
+                            print("Do you want to input your own password or have one generated for you? Use short codes\n'gp\' to generate password.\n \'cyo\' to choose your own password \n \'ex\' to exit... ")
+                            password_choice = input()
+                            if password_choice == 'cyo':
+                                password = input(
+                                    "Enter a password of your choice...")
+                                break
+
+                            elif password_choice == 'gp':
+                                print(
+                                    "Enter the length of the password you wish to generate eg 9 ")
+                                pass_len = input()
+                                pass_len = int(pass_len)
+                                password = Credential.generate_password(
+                                    pass_len)
+                                break
+
+                            elif password_choice == 'ex':
+                                break
+
+                            else:
+                                print("Sorry I did not get that. Please try again")
+
+
 
 
 
