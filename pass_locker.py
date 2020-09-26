@@ -72,6 +72,27 @@ def main():
         print("Use these short codes to navigate through Password_Locker:\n ln to log in \n ca to create a new account. \n ex to exit")
         print('\n')
 
+        short_code = input().lower()
+        if short_code == 'ca':
+            print("New Account")
+            print("-"*10)
+
+            print("Enter First Name ...")
+            first_name = input()
+
+            print("Enter Last Name ...")
+            last_name = input()
+
+            print("Enter Phone Number ...")
+            phone_number = input()
+
+            print(" Enter Email Address ...")
+            email = input()
+
+            print("Do you want to input your own password or have one generated for you? Use short codes\n'gp\' to generate password.\n \'cyo\' to choose your own password \n \'ex\' to exit... ")
+            password_choice = input()
+            password = ''
+
 
 
 if __name__ == "__main__":
