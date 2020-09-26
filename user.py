@@ -84,7 +84,7 @@ class Credential:
         return ''.join(secrets.choice(password_chars) for i in range(int(pass_len)))
       
     @classmethod
-    def find_by_socialmedia(cls, socialmedia):
+    def find_by_site_name(cls, site_name):
         '''
         function to find whether the user credentials exist
         '''
@@ -93,10 +93,10 @@ class Credential:
                 
                 return credential
 
-    # @classmethod
-    # def copy_socialmedia(cls, socialmedia):
-    #     '''
-    #     method to copy user credentials to the clipboard once user account is entered.
-    #     '''
-    #     credentials_found =Credential.find_by_socialmedia(socialmedia)
-    #     pyperclip.copy(credentials_found.socialmedia)
+    @classmethod
+    def copy_credentials(cls, site_name):
+        '''
+        class method that copies user credential's to the clipboard once user account is entered.
+        '''
+        found_credential = cls.find_by_site_name(site_name)
+        return pyperclip.copy(found_credential.account_password)
