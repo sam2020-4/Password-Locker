@@ -138,6 +138,20 @@ def main():
                     print('\n')
                     short_code = input().lower()
 
+                    if short_code == 'cc':
+                        print('\n')
+                        print("Enter your credential details")
+                        print("Enter account type... eg \'google\'")
+                        account_name = input()
+                        print(f"Enter username ")
+                        user_name = input()
+                        print(f"Enter site name")
+                        site_name = input()
+
+                        print(f"Enter the username you used or would love to use on {site_name}")
+                        user_name = input()
+
+
 
 
 
