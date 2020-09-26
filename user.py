@@ -64,12 +64,13 @@ class Credential:
                 return current_user
     
     # declaring and initializing variables
-    def __init__(self, user_name, socialmedia, password):
+    def __init__(self, user_name, site_name,account_name, password):
         '''
         method to define objects to be hold by the function
         '''
         self.user_name =user_name
-        self.socialmedia = socialmedia
+        self.site_name = site_name
+        self.account_name = account_name
         self.password = password
     
     def save_credentials(self):
@@ -88,7 +89,7 @@ class Credential:
         function to find whether the user credentials exist
         '''
         for credential in cls.credential_list:
-            if credential.socialmedia == socialmedia:
+            if credential.site_name == site_name:
                 
                 return credential
 
