@@ -7,8 +7,9 @@ class User:
     """
     class that generates new instances of user
     """
-
-    user_list = [] #empty user list
+    
+    #empty user list
+    user_list = [] 
 
     def __init__(self, first_name,last_name,email,phone_number, password):
         
