@@ -108,6 +108,20 @@ def main():
             elif password_choice == 'ex':
                 break
 
+            else:
+                print("Sorry, I did not get that. Please try again")
+            
+            save_user(create_user(first_name, last_name, email, phone_number, password))
+            print('\n')
+            print(f"New Account for {first_name} {last_name} created.")
+            print('\n')
+            print(
+                f"Your password is {password} :-Use it to log in using short code ln")
+
+            print('\n')
+
+
+
 
 
 
