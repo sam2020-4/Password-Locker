@@ -17,9 +17,17 @@ def create_credential(user_name, site_name, account_name, password):
     new_credential = Credential(user_name, site_name, account_name, password)
     return new_credential
 
+def save_user(user):
+    '''
+    Function to save a new user account
+    '''
+    User.save_user(user)
 
-
-
+def save_credentials(credential):
+    '''
+    Function to save a new user account
+    '''
+    Credential.save_credentials(credential)
 
 if __name__ == '__main__':
     main()
