@@ -49,6 +49,12 @@ def find_by_site_name(cls, site_name):
     '''
     return cls.find_by_site_name(cls, site_name)
 
+@classmethod
+def copy_credentials(cls, site_name):
+    '''
+    A class method to enable us to copy credentials of a given site name.
+    '''
+    return cls.copy_credentials(cls, site_name)
 
 
 if __name__ == '__main__':
