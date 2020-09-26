@@ -127,6 +127,11 @@ def main():
             password = input()
             account_exist = verify_user(first_name, password)
 
+            if account_exist == first_name:
+                print('\n')
+                print(f"Welcome to your Password locker account {first_name}: \n Please choose an option to continue...")
+                print('\n')
+
 
 
 
