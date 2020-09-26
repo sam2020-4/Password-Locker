@@ -56,13 +56,23 @@ def copy_credentials(cls, site_name):
     '''
     return cls.copy_credentials(cls, site_name)
 
-def main():
-
+# welcoming page
+def main():    
+    print("Hello, Welcome to the Password Locker App!!:")
+    
     guest_name = input("What is your name?")
-    print(f"Hello {guest_name}, welcome to Password Locker:")
+    
+    print(f"CONGRATULATIONS {guest_name}, for visiting our Application and feel free for the interaction:")
     print('\n')
+
+    while True:
+        print('\n')
+        print(r"*"*30)
+        print('\n')
+        print("Use these short codes to navigate through Password_Locker:\n ln to log in \n ca to create a new account. \n ex to exit")
+        print('\n')
+
 
 
 if __name__ == "__main__":
-    main()
-    
+    main()    
