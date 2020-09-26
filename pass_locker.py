@@ -42,8 +42,13 @@ def generate_password(pass_len):
     '''
     return Credential.generate_password(pass_len)
 
+@classmethod
+def find_by_site_name(cls, site_name):
+    '''
+    A function to search for credentials when given an account site search as google, or twitter.
+    '''
+    return cls.find_by_site_name(cls, site_name)
 
-    
 
 
 if __name__ == '__main__':
