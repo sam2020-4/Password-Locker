@@ -7,9 +7,9 @@ class User:
     """
     class that generates new instances of user
     """
-    
+
     #empty user list
-    user_list = [] 
+    users_list = [] 
 
     def __init__(self, first_name,last_name,email,phone_number, password):
         
@@ -26,7 +26,7 @@ class User:
         save_user method saves objects into user_list
         '''
         
-        User.user_list.append(self)
+        User.users_list.append(self)
 
     #displaying all saved users
     @classmethod
@@ -34,14 +34,14 @@ class User:
         '''
         this method returns user details.
         '''
-        return cls.user_list    
+        return cls.users_list    
 
     #deleting user
     def delete_user(self):
         '''
         function to delete user info
         '''
-        User.user_list.remove(self)    
+        User.users_list.remove(self)    
     
 
 # class for Credential starts here
@@ -53,14 +53,14 @@ class Credential:
     user_credentials_list = []
 
     @classmethod
-    def check_user(cls,u_name,password):
+    def check_user(cls,first_name, password):
         '''
         function that checks if the user name and password entered matches with the one on user_list.
         '''
         current_user = ""
-        for user in User.user_list:
-            if (user.u_name == u_name and user.password == password):
-                current_user = user.u_name
+        for user in User.users_list:
+            if (user.first_name == first_name and user.password == password):
+                current_user = user.first_name
                 return current_user
     
     # declaring and initializing variables
