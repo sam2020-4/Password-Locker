@@ -57,4 +57,14 @@ class Credential:
 		return password_gen
 
     
+    @classmethod
+	def display_credentials(cls,username):
+		'''
+		Method to display the list of credentials saved.
+		'''
+		user_credentials_list = []
+		for credential in cls.credentials_list:
+			if credential.username == username:
+				user_credentials_list.append(credential)
+		return user_credentials_list
 
