@@ -14,6 +14,7 @@ class Credential:
 	user_credentials_list = []
 
     def __init__(self,username,site_name,account_name,password):
+        
 		'''
 		Method to define the properties for each user object.
 		'''
@@ -68,3 +69,12 @@ class Credential:
 				user_credentials_list.append(credential)
 		return user_credentials_list
 
+    @classmethod
+	def find_by_site_name(cls, site_name):
+		'''
+		Method that takes in a site_name and returns a credential that matches that site_name.
+		'''
+		for credential in cls.credentials_list:
+			if credential.site_name == site_name:
+				return credential
+		return False
