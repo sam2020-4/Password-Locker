@@ -3,8 +3,7 @@ import pyperclip #importing pyperclip for copying to clipboard
 
 class User:
 	'''
-	Class to create user accounts and save their details
-	'''
+	Class to create user accounts and save their details	'''
 
 
 	def __init__(self,first_name,last_name,password):
