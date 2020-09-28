@@ -34,4 +34,12 @@ class Credential:
 				current_user = user.first_name
 		return current_user
 
+    def save_credentials(self):
+		'''
+		Function to save a newly created user credentials
+		'''
+
+		Credential.credentials_list.append(self)
+  
+
 
