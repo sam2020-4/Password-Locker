@@ -3,7 +3,6 @@ import pyperclip  #importing pyperclip for copying to clipboard
 from user_class import User  #imporing user class
 from credential_class import Credential #importing credential class
 
-
 class TestContact(unittest.TestCase):
 
     '''
@@ -17,7 +16,7 @@ class TestContact(unittest.TestCase):
         '''
         Setup method to run before each test case 
         ''' 
-        self.new_user = User('sam', 'matta', '1234')
+        self.new_user = User('sam', 'matta', '123456')
     
     def test_init(self):
         '''
@@ -26,7 +25,7 @@ class TestContact(unittest.TestCase):
 
         self.assertEqual(self.new_user.first_name,"sam")
         self.assertEqual(self.new_user.last_name,"matta")
-        self.assertEqual(self.new_user.password,"1234")
+        self.assertEqual(self.new_user.password,"123456")
         
     def test_save_user(self):
         '''
@@ -53,16 +52,16 @@ class TestCredentials(unittest.TestCase):
         '''
 		Setup method to run before each test case
 		'''
-        self.new_credential = Credential('sam','twitter.com','matta','1234')
+        self.new_credential = Credential('sam','FB.com','matta','123456')
 
     def test__init__(self):
         '''
 		Test to check if the initialization/creation of credential instances is properly done
 		'''
         self.assertEqual(self.new_credential.username,'sam')
-        self.assertEqual(self.new_credential.site_name,'twitter.com')
+        self.assertEqual(self.new_credential.site_name,'FB.com')
         self.assertEqual(self.new_credential.account_name,'matta')
-        self.assertEqual(self.new_credential.password,'1234')
+        self.assertEqual(self.new_credential.password,'123456')
         
     def test_save_credentials(self):
         '''
@@ -79,7 +78,7 @@ class TestCredentials(unittest.TestCase):
         objects to our credentials_list
         '''
         self.new_credential.save_credentials()
-        test_credential = Credential("sam","Medium","matta","1234") # new credential
+        test_credential = Credential("sam1","Medium","matta1","112233") # new credential
         test_credential.save_credentials()
         
         self.assertEqual(len(Credential.credentials_list),2)
@@ -95,19 +94,19 @@ class TestCredentials(unittest.TestCase):
 		Test to check if we can find a credential by site_name
 		'''
         self.new_credential.save_credentials()
-        test_twitter = Credential('sam','twitter','matta','1234')
-        test_twitter.save_credentials()
+        test_fb = Credential('sam','facebook','matta','123456')
+        test_fb.save_credentials()
         
-        credential_exists = Credential.find_by_site_name('twitter')
-        self.assertEqual(credential_exists,test_twitter)
+        credential_exists = Credential.find_by_site_name('facebook')
+        self.assertEqual(credential_exists,test_fb)
         
     def test_display_credentials(self):
         '''
         method that returns a list of all credentials saved
         '''
         self.new_credential.save_credentials()
-        test_twitter = Credential('sam','twitter','matta','1234')
-        test_twitter.save_credentials()
+        test_fb = Credential('sam','facebook','matta','123456')
+        test_fb.save_credentials()
         
         self.assertEqual(Credential.display_credentials(User),Credential.user_credentials_list)
         
@@ -116,12 +115,13 @@ class TestCredentials(unittest.TestCase):
 		Test to confirm if we can copy a credential from saved credentials
 		'''
         self.new_credential.save_credentials()
-        test_twitter = Credential('sam','twitter','matta','1234')
-        test_twitter.save_credentials() 
-        Credential.copy_credential('1234')
+        test_fb = Credential('sam','facebook','matta','123456')
+        test_fb.save_credentials() 
+        Credential.copy_credential('123456')
         
         self.assertEqual(self.new_credential.password,pyperclip.paste())
-        print(pyperclip.paste())  
+        print(pyperclip.paste())
+  
         
 if __name__ == '__main__':
     unittest.main()
