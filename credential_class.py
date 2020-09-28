@@ -40,6 +40,14 @@ class Credential:
 		'''
 
 		Credential.credentials_list.append(self)
+    
+    @classmethod
+	def delete_credentials(self):
+		'''
+		Function to save a newly created user credentials
+		'''
+				
+		Credential.credentials_list.remove(self)
   
 
 
